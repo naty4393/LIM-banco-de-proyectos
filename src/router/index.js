@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/users/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -11,12 +11,39 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/most-recent',
+    name: 'MostRecent',
+    component: () => import(/* webpackChunkName: "about" */ '../views/users/MostRecent.vue')
+  },
+  {
+    path: '/movies',
+    name: 'Movies',
+    component: () => import(/* webpackChunkName: "about" */ '../views/users/Movies.vue')
+  },
+  {
+    path: '/my-list',
+    name: 'MyList',
+    component: () => import(/* webpackChunkName: "about" */ '../views/users/MyList.vue')
+  },
+  {
+    path: '/programs',
+    name: 'Programs',
+    component: () => import(/* webpackChunkName: "about" */ '../views/users/Program.vue')
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "about" */ '../views/admi/Login.vue')
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import(/* webpackChunkName: "about" */ '../views/admi/Register.vue')
+  },
+  {
+    path: '/Sign-in-Movie',
+    name: 'SignInMovie',
+    component: () => import(/* webpackChunkName: "about" */ '../views/admi/SignInMovie.vue')
   }
 ]
 
